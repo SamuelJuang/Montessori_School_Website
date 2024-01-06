@@ -7,9 +7,10 @@ function GalleryPage() {
       <section className="py-10 px-4 md:px-8 lg:px-16">
         {/* ROW PERTAMA + FLOATING */}
         <div className="flex flex-row gap-5">
+          {/* KIRI */}
           <div className="w-5/6">
             <h1 className="text-5xl font-semibold">Gallery</h1>
-            <h1 className="text-md mt-3 text-gray-500">
+            <h1 className="text-md mt-3 mb-8 text-gray-500">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
               earum, fugit facere illo, corrupti iste, aliquam hic totam ab
               itaque consectetur. Hic aliquam doloremque qui consequatur autem
@@ -17,7 +18,7 @@ function GalleryPage() {
             </h1>
 
             {/* img1 */}
-            <div className="relative overflow-hidden rounded-2xl shadow transition hover:shadow-lg h-96 mt-5 w-full">
+            <div className="relative overflow-hidden rounded-2xl shadow transition hover:shadow-lg h-[28rem] mt-5 w-full">
               <img
                 alt="..."
                 src={defaultImg}
@@ -39,6 +40,8 @@ function GalleryPage() {
               </div>
             </div>
           </div>
+
+          {/* KANAN */}
           <div className="w-2/6 relative">
             <div className="relative overflow-hidden rounded-2xl shadow transition hover:shadow-lg h-96 mt-5">
               <img
@@ -62,7 +65,8 @@ function GalleryPage() {
               </div>
             </div>
 
-            <div className="absolute z-10 overflow-hidden rounded-2xl shadow transition hover:shadow-lg h-64 w-full mt-5">
+            {/* FLOATING */}
+            <div className="absolute z-10 overflow-hidden rounded-2xl shadow transition hover:shadow-lg h-64 w-[30rem] mt-5">
               <img
                 alt="..."
                 src={defaultImg2}
@@ -88,7 +92,7 @@ function GalleryPage() {
 
         {/* ROW KEDUA */}
         <div className="flex flex-row gap-5 -ms-20 relative">
-          <div className="relative overflow-hidden rounded-2xl shadow transition hover:shadow-lg h-80 w-1/3 mt-5">
+          <div className="relative overflow-hidden rounded-2xl shadow transition hover:shadow-lg h-96 w-1/4 mt-5">
             <img
               alt="..."
               src={defaultImg}
@@ -111,7 +115,7 @@ function GalleryPage() {
             </div>
           </div>
 
-          <div className="relative overflow-hidden rounded-2xl shadow transition hover:shadow-lg h-96 w-1/2 mt-5">
+          <div className="relative overflow-hidden rounded-2xl shadow transition hover:shadow-lg h-[32rem] w-4/6 mt-5">
             <img
               alt="..."
               src={defaultImg}

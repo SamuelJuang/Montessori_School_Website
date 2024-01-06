@@ -9,7 +9,9 @@ const AppLayout = ({ children }) => {
       <Navbar />
 
       {/* content dari router, jika ada children/outlet */}
-      <div className="">{children ? children : <Outlet />}</div>
+      <div className="overflow-x-hidden">
+        {children ? children : <Outlet />}
+      </div>
     </>
   );
 };
