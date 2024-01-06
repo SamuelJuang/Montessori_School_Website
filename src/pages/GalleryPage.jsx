@@ -6,9 +6,9 @@ function GalleryPage() {
     <div className="container mx-auto">
       <section className="py-10 px-4 md:px-8 lg:px-16">
         {/* ROW PERTAMA + FLOATING */}
-        <div className="flex flex-row gap-5">
+        <div className="flex flex-col lg:flex-row gap-5">
           {/* KIRI */}
-          <div className="w-5/6">
+          <div className="lg:w-5/6">
             <h1 className="text-5xl font-semibold">Gallery</h1>
             <h1 className="text-md mt-3 mb-8 text-gray-500">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
@@ -18,7 +18,7 @@ function GalleryPage() {
             </h1>
 
             {/* img1 */}
-            <div className="relative overflow-hidden rounded-2xl shadow transition hover:shadow-lg h-[28rem] mt-5 w-full">
+            <div className="relative overflow-hidden rounded-2xl shadow transition hover:shadow-lg h-[20rem] md:h-[28rem] mt-5 w-full">
               <img
                 alt="..."
                 src={defaultImg}
@@ -42,8 +42,9 @@ function GalleryPage() {
           </div>
 
           {/* KANAN */}
-          <div className="w-2/6 relative">
-            <div className="relative overflow-hidden rounded-2xl shadow transition hover:shadow-lg h-96 mt-5">
+          {/* flex-col md:flex-row */}
+          <div className="flex gap-3 lg:block lg:w-2/6 relative lg:-me-20">
+            <div className="relative overflow-hidden rounded-2xl shadow transition hover:shadow-lg h-64 lg:h-96 lg:mt-5 w-full md:w-1/2 lg:w-5/6">
               <img
                 alt="..."
                 src={defaultImg}
@@ -66,7 +67,7 @@ function GalleryPage() {
             </div>
 
             {/* FLOATING */}
-            <div className="absolute z-10 overflow-hidden rounded-2xl shadow transition hover:shadow-lg h-64 w-[30rem] mt-5">
+            <div className="relative lg:absolute z-10 overflow-hidden rounded-2xl shadow transition hover:shadow-lg h-64 w-full md:w-1/2 lg:w-full lg:mt-5">
               <img
                 alt="..."
                 src={defaultImg2}
@@ -91,16 +92,16 @@ function GalleryPage() {
         </div>
 
         {/* ROW KEDUA */}
-        <div className="flex flex-row gap-5 -ms-20 relative">
-          <div className="relative overflow-hidden rounded-2xl shadow transition hover:shadow-lg h-96 w-1/4 mt-5">
+        <div className="flex flex-col md:flex-row gap-5 lg:-ms-20 relative">
+          <div className="relative overflow-hidden rounded-2xl shadow transition hover:shadow-lg aspect-video md:h-96 w-full lg:w-1/4 mt-5">
             <img
               alt="..."
-              src={defaultImg}
+              src={defaultImg2}
               className="absolute inset-0 h-full w-full object-cover object-center"
             />
 
             <div className="relative bg-gradient-to-b from-gray-900/50 to-gray-900/25 h-full w-full">
-              <div className="absolute p-4 sm:p-6 top-0 right-0 w-2/3 text-right">
+              <div className="absolute p-4 sm:p-6 bottom-0 lg:bottom-auto lg:top-0 lg:right-0 w-2/3 lg:text-right">
                 <h3 className="mt-0.5 text-lg font-semibold text-white line-clamp-2">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 </h3>
@@ -115,7 +116,7 @@ function GalleryPage() {
             </div>
           </div>
 
-          <div className="relative overflow-hidden rounded-2xl shadow transition hover:shadow-lg h-[32rem] w-4/6 mt-5">
+          <div className="relative overflow-hidden rounded-2xl shadow transition hover:shadow-lg aspect-video md:h-96 lg:h-[32rem] w-full lg:w-4/6 md:mt-5">
             <img
               alt="..."
               src={defaultImg}
