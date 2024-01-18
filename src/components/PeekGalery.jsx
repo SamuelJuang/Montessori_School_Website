@@ -24,7 +24,7 @@ export default function PeekGalery() {
                     {galleries.map((content, index) => (
                         <SwiperSlide key={index} className="h-full container mt-10">
                             <div className="mx-40 bg-slate-100 rounded-3xl pt-5 pb-12">
-                                <div className="text-center pt-5 px-5 font-semibold text-4xl">
+                                <div className="items-center pt-5 px-5">
                                     <video src={content}></video>
                                 </div>
                             </div>
