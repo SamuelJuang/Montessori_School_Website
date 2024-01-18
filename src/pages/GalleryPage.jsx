@@ -201,6 +201,101 @@ function GalleryPage() {
           </div> */}
         </div>
       </section>
+
+      {/* Event 1 */}
+      <section className="py-10 px-4 md:px-8 lg:px-16">
+        <h1 className="text-4xl font-semibold">Event #1</h1>
+        <h1 className="text-gray-500 pt-4 pb-3">
+          The education of even a small child, therefore, does not.
+        </h1>
+        {/* Row */}
+        <div className="container">
+          <div className="flex flex-col lg:flex-row justify-between">
+            {/* First Image */}
+            <div className="overflow-hidden rounded-2xl my-3 lg:px-3 lg:-ml-40 lg:h-[20rem]">
+              <img
+                src={defaultImg2}
+                alt=""
+                className="object-cover object-center h-full w-full rounded-2xl"
+              />
+            </div>
+            {/* Second Image */}
+            <div className="overflow-hidden rounded-2xl my-3 lg:px-3 lg:w-[90rem] lg:h-[30rem]">
+              <img
+                src={defaultImg}
+                alt=""
+                className="object-cover object-center h-full w-full rounded-2xl"
+              />
+            </div>
+            {/* Thrid Image */}
+            <div className="overflow-hidden rounded-2xl my-3 lg:px-3 lg:-mr-64 lg:h-[25rem]">
+              <img
+                src={defaultImg2}
+                alt=""
+                className="object-cover object-center h-full w-full rounded-2xl"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Event 2 */}
+      <section className="py-10 px-4 md:px-8 lg:px-16">
+        <div className="flex lg:justify-end">
+          <h1 className="text-4xl font-semibold">Event #2</h1>
+        </div>
+        <div className="flex lg:justify-end">
+          <h1 className="text-gray-500 pt-4 pb-3">
+            The education of even a small child, therefore, does not.
+          </h1>
+        </div>
+        <div className="flex flex-col lg:flex-row">
+          {/* Left Section */}
+          <div>
+            <div className="overflow-hidden rounded-2xl my-3 lg:px-3 lg:-ml-[29rem] lg:h-[25rem]">
+              <img
+                src={defaultImg2}
+                alt=""
+                className="object-cover object-center h-full w-full rounded-2xl"
+              />
+            </div>
+            <div className="overflow-hidden rounded-2xl my-3 lg:px-3 lg:-ml-[29rem] lg:h-[25rem]">
+              <img
+                src={defaultImg2}
+                alt=""
+                className="object-cover object-center h-full w-full rounded-2xl"
+              />
+            </div>
+          </div>
+
+          {/* Middle Section */}
+          <div className="overflow-hidden rounded-2xl my-3 lg:px-3 lg:w-[65rem] lg:h-[51rem]">
+            <img
+              src={defaultImg}
+              alt=""
+              className="object-cover object-center h-full w-full rounded-2xl"
+            />
+          </div>
+
+          {/* Right Section */}
+          <div>
+            <div className="overflow-hidden rounded-2xl my-3 lg:px-3 lg:-mr-[29rem] lg:h-[25rem]">
+              <img
+                src={defaultImg2}
+                alt=""
+                className="object-cover object-center h-full w-full rounded-2xl"
+              />
+            </div>
+            <div className="overflow-hidden rounded-2xl my-3 lg:px-3 lg:-mr-[29rem] lg:h-[25rem]">
+              <img
+                src={defaultImg2}
+                alt=""
+                className="object-cover object-center h-full w-full rounded-2xl"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
