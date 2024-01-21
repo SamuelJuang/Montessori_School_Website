@@ -38,6 +38,7 @@ const Footer = () => {
                         </li>
                     ))}
                 </ul>
+                
                 {/* Contacts */}
                 <ul className="col-span-1">
                     <h1 className="mb-1 font-semibold">Contacts</h1>
