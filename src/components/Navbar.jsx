@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import logo from '../assets/logoMCS.png';
 import { IoMenu, IoClose } from 'react-icons/io5';
-import { useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [navbarVisible, setNavbarVisible] = useState(false);
