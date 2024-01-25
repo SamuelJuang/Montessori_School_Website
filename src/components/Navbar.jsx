@@ -42,11 +42,9 @@ const Navbar = () => {
     {/* Ini navbarnya */}
       <div className={`shadow-md bg-transparent ${navbarVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'} duration-500 ease-in-out`}>
         <div className="md:px-10 py-4 px-7 flex justify-between items-center flex-col md:flex-row">
-
-          {/* ini logonya */}
           <div className="flex justify-between w-full md:w-auto items-center md:mb-0">
           
-            {/* Logo on the left */}
+            {/* logo mcs */}
             <div className="flex text-2xl cursor-pointer items-center gap-2">
               <img src={logo} alt="Logo" className="h-7 w-7 md:h-14 md:w-14" />
             </div>

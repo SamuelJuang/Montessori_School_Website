@@ -27,6 +27,7 @@ const Footer = () => {
                 <span className="font-semibold text-lg sm:text-xl lg:text-2xl my-auto">Montessori Community School</span>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6 sm:px-8 px-5 py-4">
+            
                 {/* Navigasi */}
                 <ul className="col-span-2">
                     <h1 className="mb-1 font-semibold">Navigation</h1>
@@ -51,6 +52,8 @@ const Footer = () => {
                     ))}
                 </ul>
             </div>
+
+            {/* ini icon2 */}
             <div className="flex justify-between items-center text-center pt-2 text-gray-400 text-sm pb-8">
                 <span className="ps-7 font-semibold">© Copyright MCS 2024</span>
                 <div className="text-black-500 pr-5">
