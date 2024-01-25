@@ -15,9 +15,9 @@ const Footer = () => {
     ];
 
     const Contacts = [
-        { name: 'Address:', link: '#' },
-        { name: 'Email:', link: '#' },
-        { name: 'Telephone:', link: '#' }
+        { name: 'Address: Jl. Pemuda, Pemuda City Walk, Blok D03, Pekanbaru, 28292'},
+        { name: 'Email: admin@sekolahmcs.net'},
+        { name: 'Telephone (Contact Number): +6285281536872'}
     ];
 
     return (
@@ -27,7 +27,7 @@ const Footer = () => {
                 <span className="font-semibold text-lg sm:text-xl lg:text-2xl my-auto">Montessori Community School</span>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6 sm:px-8 px-5 py-4">
-            
+
                 {/* Navigasi */}
                 <ul className="col-span-2">
                     <h1 className="mb-1 font-semibold">Navigation</h1>
@@ -41,13 +41,13 @@ const Footer = () => {
                 </ul>
                 
                 {/* Contacts */}
-                <ul className="col-span-1">
+                <ul className="col-span-2">
                     <h1 className="mb-1 font-semibold">Contacts</h1>
                     {Contacts.map((menu) => (
                         <li key={menu.name}>
-                            <a className="text-gray-400 hover:text-white duration-300 text-sm cursor-pointer leading-6" href={menu.link}>
+                            <p className="text-gray-400 hover:text-white duration-300 text-sm cursor-pointer leading-6">
                                 {menu.name}
-                            </a>
+                            </p>
                         </li>
                     ))}
                 </ul>
