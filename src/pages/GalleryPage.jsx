@@ -1,5 +1,6 @@
 import defaultImg from "../assets/test.png";
 import defaultImg2 from "../assets/test2.jpg";
+import Gallery3 from "../components/Gallery3";
 
 function GalleryPage() {
   return (
@@ -295,6 +296,9 @@ function GalleryPage() {
             </div>
           </div>
         </div>
+      </section>
+      <section className="py-10 px-4 md:px-8 lg:px-16">
+        <Gallery3 />
       </section>
     </div>
   );
