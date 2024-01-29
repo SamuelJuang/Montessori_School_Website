@@ -21,32 +21,6 @@ export default function Gallery3() {
         defaultImg2,
     ];
 
-    // useEffect(() => {
-    //     const handleResize = () => {
-    //         const screenWidth = window.innerWidth;
-
-    //         if (screenWidth >= 1200) {
-    //             setSpaceBetween(-200); // Adjust this value for extra-large screens
-    //         } else if (screenWidth >= 992) {
-    //             setSpaceBetween(-400); // Adjust this value for large screens
-    //         } else if (screenWidth >= 768) {
-    //             setSpaceBetween(-300); // Adjust this value for medium screens
-    //         } else {
-    //             setSpaceBetween(-200); // Default value for small screens
-    //         }
-    //     };
-
-    //     handleResize();
-
-    //     // Event listener for screen resize
-    //     window.addEventListener('resize', handleResize);
-
-    //     // Cleanup the event listener on component unmount
-    //     return () => {
-    //         window.removeEventListener('resize', handleResize);
-    //     };
-    // }, []);
-
     return (
         <>
             <h1 className="text-4xl text-center font-semibold">Event #3</h1>
@@ -59,36 +33,37 @@ export default function Gallery3() {
                 centeredSlides={true}
                 breakpoints={{
                     1536: {
-                        spaceBetween: -200
+                        spaceBetween: 50
                     },
                     1280: {
-                        spaceBetween: -160
+                        spaceBetween: 40
                     },
                     1024: {
-                        spaceBetween: -130
+                        spaceBetween: 60
                     },
                     768: {
-                        spaceBetween: -100
+                        spaceBetween: 50
                     },
                 }}
-                spaceBetween={5}
+                spaceBetween={20}
                 navigation={true}
                 pagination={{
                     clickable: true,
                 }}
                 modules={[Pagination, Navigation]}
-                className="overflow-visible"
+                className=""
+                style={{
+                    overflow: "visible",
+                }}
             >
 
-                <ol>
-                    {data.map((content, index) => (
-                        <SwiperSlide key={index} className="h-full w-full mt-5 overflow-visible">
-                            <div className="rounded-3xl pt-5 pb-12 items-center overflow-visible">
-                                <img className="object-cover object-center sm: size-full lg: h-10/12 lg: w-10/12 rounded-2xl mx-auto overflow-visibles" src={content} alt={index} />
-                            </div>
-                        </SwiperSlide>
-                    ))}
-                </ol>
+                {data.map((content, index) => (
+                    <SwiperSlide key={index} className="h-full mt-5">
+                        <div className="rounded-3xl pt-5 pb-12 items-center">
+                            <img className="object-cover w-full aspect-video object-center rounded-2xl mx-auto" src={content} alt={index} />
+                        </div>
+                    </SwiperSlide>
+                ))}
 
             </Swiper>
         </>
