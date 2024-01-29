@@ -4,7 +4,7 @@ import tempImg from "../assets/temp.jpg";
 
 const AboutHome = () => {
     return (
-           <div className='gap-2'>
+           <div className='flex flex-col gap-7'>
                 <div className='flex flex-col lg:flex-row sm:flex-col'>
                     <div className='basis-8/12 mx-8 lg:ps-5 lg:ms-9 lg:mt-9 mt-5'>
                     <div className='flex flex-col gap-2'>
@@ -22,19 +22,19 @@ const AboutHome = () => {
                     </div>
                     </div>
                     <div className='basis-4/12 lg:ps-5 lg:pe-9 lg:me-9'>
-                        <div className='lg:mb-9 lg:mt-9'>
-                            <img className="object-cover rounded-xl w-11/12 h-1/5 mt-5 mx-auto" src={tempImg} alt="test"/>
+                        <div className='lg:mt-9'>
+                            <img className="object-cover rounded-xl w-11/12 h-1/5 mt-5 mx-6" src={tempImg} alt="test"/>
                         </div>
                     </div>
                 </div>
                 <div className='flex flex-col-reverse lg:flex-row'>
-                    <div className='basis-5/12 lg:ps-5 lg:pe-5 lg:ms-9 '>
-                        <div className='mb-5 mx-4 h-1/5'>
+                    <div className='basis-5/12 lg:ps-5 lg:pe-5 ms-9 mt-5'>
+                        <div className='mb-5 h-1/5'>
                             <img className="object-cover rounded-xl" src={defaultImg} alt="test"/>
                         </div>
                     </div>
                     
-                    <div className='basis-7/12 mx-2 ps-5 mb-3 pe-9 me-9 lg:mb-5 '>
+                    <div className='basis-7/12 mx-2 ps-5 mb-9 pe-9 me-9 lg:mb-5 '>
                         <div className='flex flex-col gap-2'>
                             <p className='text-slate-400 m-0 p-0 mt-5'>
                             One of the defining features of Montessori education is the use of specialised learning materials designed to encourage hands-on learning, free from adult direction. These materials are designed to stimulate children’s minds, encourage exploration, and inspire independent learning.
