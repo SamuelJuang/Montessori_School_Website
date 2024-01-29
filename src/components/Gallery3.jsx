@@ -26,7 +26,7 @@ export default function Gallery3() {
             <h1 className="text-4xl text-center font-semibold">Event #3</h1>
             <div className="text-center">
                 <h1 className="text-gray-500 pt-4 pb-3">
-                    Ikan hiu makan tomat, cakep.
+                    Ikan hiu makan tomat, cakep banget.
                 </h1>
             </div>
             <Swiper slidesPerView={'auto'}
