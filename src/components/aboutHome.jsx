@@ -1,6 +1,7 @@
 import React from 'react';
 import defaultImg from "../assets/test.png";
 import tempImg from "../assets/temp.jpg";
+import temp2 from "../assets/test2.jpg";
 
 const AboutHome = () => {
     return (
@@ -21,17 +22,13 @@ const AboutHome = () => {
                             </p>
                     </div>
                     </div>
-                    <div className='basis-4/12 lg:ps-5 lg:pe-9 lg:me-9'>
-                        <div className='lg:mt-9'>
-                            <img className="object-cover rounded-xl w-11/12 h-1/5 mt-5 mx-6" src={tempImg} alt="test"/>
-                        </div>
+                    <div className='basis-4/12 lg:ps-5 lg:pe-9 lg:me-9 lg:mt-9 mt-5'>
+                        <img className="object-cover rounded-xl w-11/12 h-full mx-6" src={tempImg} alt="test"/>
                     </div>
                 </div>
                 <div className='flex flex-col-reverse lg:flex-row'>
-                    <div className='basis-5/12 lg:ps-5 lg:pe-5 ms-9 mt-5'>
-                        <div className='mb-5 h-1/5'>
-                            <img className="object-cover rounded-xl" src={defaultImg} alt="test"/>
-                        </div>
+                    <div className='basis-5/12 mx-6 lg:ps-5 lg:pe-5 lg:ms-9 mt-5 mb-5 '>
+                        <img className="object-cover rounded-xl h-72 w-full" src={temp2} alt="test"/>
                     </div>
                     
                     <div className='basis-7/12 mx-2 ps-5 mb-9 pe-9 me-9 lg:mb-5 '>
