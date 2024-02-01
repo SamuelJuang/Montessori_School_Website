@@ -6,7 +6,7 @@ const Footer = () => {
     const Icons = [
         { icon: <FaFacebookF />, link: "https://www.facebook.com/MCSPekanbaru" },
         { icon: <FaYoutube />, link: "https://www.youtube.com/@mcshome" },
-        { icon: <FaInstagram />, link: "#" },
+        { icon: <FaInstagram />, link: "https://www.instagram.com/montessorihome?igsh=Znh5N3B1cml5Z2My" },
     ];
 
     const Navigation = [
