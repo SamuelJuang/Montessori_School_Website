@@ -1,14 +1,21 @@
+import React from "react";
+import VideoBackgroundHome from "../components/videobackgroundhome";
+import AboutHome from "../components/aboutHome";
+import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
+
 function HomePage() {
+  const lenis = useLenis(({ scroll }) => {
+    // called every scroll
+  })
   return (
-    <>
-      <div className="flex flex-col">
-        <h1 className="text-center">HOME</h1>
-        <button className="m-3 mx-auto p-3 bg-blue-800 text-white rounded-md">
-          OKE
-        </button>
+    <ReactLenis root>
+      <div style={{overflowY: "hidden"}}>
+        <VideoBackgroundHome/>
+        <AboutHome/>
       </div>
-    </>
+    </ReactLenis>
   );
+  //anjay lenis
 }
 
 export default HomePage;
