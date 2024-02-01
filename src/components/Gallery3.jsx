@@ -1,9 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useEffect, useState } from "react";
 
 import defaultImg from "../assets/test.png";
 import defaultImg2 from "../assets/test2.jpg";
-import { Square } from "react-bootstrap-icons";
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -29,7 +27,8 @@ export default function Gallery3() {
                     Ikan hiu makan tomat, cakep banget.
                 </h1>
             </div>
-            <Swiper slidesPerView={'auto'}
+            <Swiper
+                slidesPerView={'auto'}
                 centeredSlides={true}
                 breakpoints={{
                     1536: {
@@ -47,16 +46,15 @@ export default function Gallery3() {
                 }}
                 spaceBetween={20}
                 navigation={true}
+                rewind={true}
                 pagination={{
                     clickable: true,
                 }}
                 modules={[Pagination, Navigation]}
-                className=""
                 style={{
                     overflow: "visible",
                 }}
             >
-
                 {data.map((content, index) => (
                     <SwiperSlide key={index} className="h-full mt-5">
                         <div className="rounded-3xl pt-5 pb-12 items-center">
