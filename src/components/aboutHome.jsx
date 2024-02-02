@@ -12,7 +12,6 @@ const AboutHome = () => {
     const videoRef = useRef();
     const videoRef2 = useRef();
     const firstTextRef = useRef();
-    const SecondTextRef = useRef();
 
     const tlText = gsap.timeline({
         defaults: {repeat: 0, ease: "power4.out"},
