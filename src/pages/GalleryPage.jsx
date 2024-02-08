@@ -288,7 +288,7 @@ function GalleryPage() {
         <div className="container">
           <div className="flex flex-col lg:flex-row justify-between">
             {/* First Image */}
-            <div className="overflow-hidden rounded-2xl my-3 lg:px-3 lg:-ml-40 lg:h-[20rem]">
+            <div className="overflow-hidden rounded-2xl my-3 lg:px-3 lg:-ml-40 lg:h-[20rem] lg:hover:translate-x-32 lg:hover:scale-110 lg:duration-500">
               <img
                 src={defaultImg2}
                 alt=""
@@ -304,7 +304,7 @@ function GalleryPage() {
               />
             </div>
             {/* Thrid Image */}
-            <div className="overflow-hidden rounded-2xl my-3 lg:px-3 lg:-mr-64 lg:h-[25rem]">
+            <div className="overflow-hidden rounded-2xl my-3 lg:px-3 lg:-mr-64 lg:h-[25rem] lg:hover:-translate-x-56 lg:hover:scale-110 lg:duration-500">
               <img
                 src={defaultImg2}
                 alt=""
@@ -328,14 +328,14 @@ function GalleryPage() {
         <div className="flex flex-col lg:flex-row">
           {/* Left Section */}
           <div>
-            <div className="overflow-hidden rounded-2xl my-3 lg:px-3 lg:-ml-[29rem] lg:h-[25rem]">
+            <div className="overflow-hidden rounded-2xl my-3 lg:px-3 lg:-ml-[29rem] lg:h-[25rem] lg:hover:translate-x-[59%] lg:duration-700">
               <img
                 src={defaultImg2}
                 alt=""
                 className="object-cover object-center h-full w-full rounded-2xl"
               />
             </div>
-            <div className="overflow-hidden rounded-2xl my-3 lg:px-3 lg:-ml-[29rem] lg:h-[25rem]">
+            <div className="overflow-hidden rounded-2xl my-3 lg:px-3 lg:-ml-[29rem] lg:h-[25rem] lg:hover:translate-x-[59%] lg:duration-700">
               <img
                 src={defaultImg2}
                 alt=""
@@ -355,14 +355,14 @@ function GalleryPage() {
 
           {/* Right Section */}
           <div>
-            <div className="overflow-hidden rounded-2xl my-3 lg:px-3 lg:-mr-[29rem] lg:h-[25rem]">
+            <div className="overflow-hidden rounded-2xl my-3 lg:px-3 lg:-mr-[29rem] lg:h-[25rem] lg:hover:-translate-x-[59%] lg:duration-700">
               <img
                 src={defaultImg2}
                 alt=""
                 className="object-cover object-center h-full w-full rounded-2xl"
               />
             </div>
-            <div className="overflow-hidden rounded-2xl my-3 lg:px-3 lg:-mr-[29rem] lg:h-[25rem]">
+            <div className="overflow-hidden rounded-2xl my-3 lg:px-3 lg:-mr-[29rem] lg:h-[25rem] lg:hover:-translate-x-[59%] lg:duration-700">
               <img
                 src={defaultImg2}
                 alt=""
