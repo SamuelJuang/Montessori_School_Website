@@ -44,40 +44,26 @@ export default function Testimonials() {
 
     const component2Ref = useRef();
 
-    let tlComponent = gsap.timeline({
-        scrollTrigger: {
-            trigger: component2Ref.current,
-            scrub: true,
-            pin: false,
-            markers: true,
-            start: 'top 80%',
-            end: '+=40% 90%',
-            snap: {
-                ease: "power4.in"
-            }
-        }
-    })
-
     useEffect(() => {
-        tlComponent.fromTo(".testi", {
-            opacity: 0,
-        }, {
-            opacity: 1,
-            duration: 1
-        });
-        console.log("masuk sinialfaskd");
-        console.log(component2Ref);
-
-        return () => {
-            tlComponent.kill();
-        };
-    }, []);
-
+        if (component2Ref.current) {
+            gsap.to(".testi", {
+                opacity: 1,
+                scrollTrigger: {
+                    trigger: component2Ref.current,
+                    scrub: true,
+                    pin: false,
+                    markers: true,
+                    start: 'top 90%',
+                    end: '+=50% 90%',
+                }
+            });
+        }
+    }, [component2Ref.current]);
 
     return (
         <>
-            <p ref={component2Ref} className="text-4xl font-semibold text-center mt-20 testi">Testimonials</p>
-            <Swiper ref={component2Ref} navigation={true} spaceBetween={0} centeredSlides={true} pagination={{ clickable: true }} modules={[Navigation, Pagination]} rewind={true} className="h-full w-3/4 mb-80 testi">
+            <p className="text-4xl font-semibold text-center mt-20 testi opacity-0">Testimonials</p>
+            <Swiper ref={component2Ref} navigation={true} spaceBetween={0} centeredSlides={true} pagination={{ clickable: true }} modules={[Navigation, Pagination]} rewind={true} className="h-full w-3/4 mb-80 testi opacity-0">
                 <ol>
                     {data.map((content, index) => (
                         <SwiperSlide key={index} className="h-full container mt-10">

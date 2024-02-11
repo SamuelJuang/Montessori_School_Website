@@ -24,35 +24,26 @@ export default function PeekGalery() {
 
     const componentRef = useRef();
 
-    let tlComponent = gsap.timeline({
-        scrollTrigger: {
-            trigger: componentRef.current,
-            scrub: true,
-            pin: false,
-            markers: true,
-            start: 'top 90%',
-            end: '+=50% 90%',
-        }
-    })
-
     useEffect(() => {
-        tlComponent.fromTo(".swiper2", {
-            opacity: 0,
-        }, {
-            opacity: 1,
-            duration: 1,
-            ease: "power2.in"
-        });
-        console.log("masuk sini");
+        if (componentRef.current) {
+            gsap.to(".swiper2", {
+                opacity: 1,
+                scrollTrigger: {
+                    trigger: componentRef.current,
+                    scrub: true,
+                    pin: false,
+                    markers: true,
+                    start: 'top 90%',
+                    end: '+=50% 90%',
+                }
+            });
+        }
+    }, [componentRef.current]);
 
-        return () => {
-            tlComponent.kill();
-        };
-    }, []);
 
     return (
         <>
-            <p className="text-4xl font-semibold text-center mt-20 swiper2" ref={componentRef}>Peek The Gallery</p>
+            <p className="text-4xl font-semibold text-center mt-20 swiper2 opacity-0">Peek The Gallery</p>
             <Swiper
                 ref={componentRef}
                 navigation={true}
@@ -75,7 +66,7 @@ export default function PeekGalery() {
                 }}
                 spaceBetween={20}
                 // style={{ overflow: "visible" }}
-                className="h-full w-10/12 lg:w-1/5` items-center swiper2"
+                className="h-full w-10/12 lg:w-1/5` items-center swiper2 opacity-0"
                 autoplay={{ delay: 5000 }}
                 centeredSlides={true}
             >
@@ -90,4 +81,3 @@ export default function PeekGalery() {
         </>
     );
 }
-

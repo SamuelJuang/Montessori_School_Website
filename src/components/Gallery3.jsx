@@ -26,39 +26,26 @@ export default function Gallery3() {
 
     const component3Ref = useRef();
 
-    let tlComponent = gsap.timeline({
-        scrollTrigger: {
-            trigger: component3Ref.current,
-            scrub: true,
-            pin: false,
-            markers: true,
-            start: 'top 90%',
-            end: '+=50% 90%',
-            snap: {
-                ease: "power4.in"
-            }
-        }
-    })
-
     useEffect(() => {
-        tlComponent.fromTo(".event", {
-            opacity: 0,
-        }, {
-            opacity: 1,
-            duration: 1
-        });
-        console.log("masuk masuke vent 4");
-        console.log(component3Ref);
-
-        return () => {
-            tlComponent.kill();
-        };
-    }, []);
+        if (component3Ref.current) {
+            gsap.to(".event", {
+                opacity: 1,
+                scrollTrigger: {
+                    trigger: component3Ref.current,
+                    scrub: true,
+                    pin: false,
+                    markers: true,
+                    start: 'top 90%',
+                    end: '+=50% 90%',
+                }
+            });
+        }
+    }, [component3Ref.current]);
 
     return (
         <>
-            <h1 ref={component3Ref} className="text-4xl text-center font-semibold event">Event #3</h1>
-            <div ref={component3Ref} className="text-center event">
+            <h1 ref={component3Ref} className="text-4xl text-center font-semibold event opacity-0">Event #3</h1>
+            <div ref={component3Ref} className="text-center event opacity-0">
                 <h1 className="text-gray-500 pt-4 pb-3">
                     Ikan hiu makan tomat, cakep banget.
                 </h1>
@@ -91,7 +78,7 @@ export default function Gallery3() {
                 style={{
                     overflow: "visible",
                 }}
-                className="event"
+                className="event opacity-0"
             >
                 {data.map((content, index) => (
                     <SwiperSlide key={index} className="h-full mt-5">
