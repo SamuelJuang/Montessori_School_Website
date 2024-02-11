@@ -1,4 +1,9 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useRef, useEffect } from "react";
+import gsap from "gsap";
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -17,10 +22,39 @@ export default function PeekGalery() {
         "src/assets/videos/C0092.MP4"
     ];
 
+    const componentRef = useRef();
+
+    let tlComponent = gsap.timeline({
+        scrollTrigger: {
+            trigger: componentRef.current,
+            scrub: true,
+            pin: false,
+            markers: true,
+            start: 'top 90%',
+            end: '+=50% 90%',
+        }
+    })
+
+    useEffect(() => {
+        tlComponent.fromTo(".swiper2", {
+            opacity: 0,
+        }, {
+            opacity: 1,
+            duration: 1,
+            ease: "power2.in"
+        });
+        console.log("masuk sini");
+
+        return () => {
+            tlComponent.kill();
+        };
+    }, []);
+
     return (
         <>
-            <p className="text-4xl font-semibold text-center mt-20">Peek The Gallery</p>
+            <p className="text-4xl font-semibold text-center mt-20 swiper2" ref={componentRef}>Peek The Gallery</p>
             <Swiper
+                ref={componentRef}
                 navigation={true}
                 rewind={true}
                 pagination={{ clickable: true }}
@@ -41,7 +75,7 @@ export default function PeekGalery() {
                 }}
                 spaceBetween={20}
                 // style={{ overflow: "visible" }}
-                className="h-full w-10/12 lg:w-1/5` items-center"
+                className="h-full w-10/12 lg:w-1/5` items-center swiper2"
                 autoplay={{ delay: 5000 }}
                 centeredSlides={true}
             >

@@ -1,4 +1,9 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useRef, useEffect } from "react";
+import gsap from "gsap";
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -37,11 +42,42 @@ export default function Testimonials() {
         },
     ];
 
+    const component2Ref = useRef();
+
+    let tlComponent = gsap.timeline({
+        scrollTrigger: {
+            trigger: component2Ref.current,
+            scrub: true,
+            pin: false,
+            markers: true,
+            start: 'top 80%',
+            end: '+=40% 90%',
+            snap: {
+                ease: "power4.in"
+            }
+        }
+    })
+
+    useEffect(() => {
+        tlComponent.fromTo(".testi", {
+            opacity: 0,
+        }, {
+            opacity: 1,
+            duration: 1
+        });
+        console.log("masuk sinialfaskd");
+        console.log(component2Ref);
+
+        return () => {
+            tlComponent.kill();
+        };
+    }, []);
+
 
     return (
         <>
-            <p className="text-4xl font-semibold text-center mt-20">Testimonials</p>
-            <Swiper navigation={true} spaceBetween={0} centeredSlides={true} pagination={{ clickable: true }} modules={[Navigation, Pagination]} rewind={true} className="h-full w-3/4 mb-80">
+            <p ref={component2Ref} className="text-4xl font-semibold text-center mt-20 testi">Testimonials</p>
+            <Swiper ref={component2Ref} navigation={true} spaceBetween={0} centeredSlides={true} pagination={{ clickable: true }} modules={[Navigation, Pagination]} rewind={true} className="h-full w-3/4 mb-80 testi">
                 <ol>
                     {data.map((content, index) => (
                         <SwiperSlide key={index} className="h-full container mt-10">

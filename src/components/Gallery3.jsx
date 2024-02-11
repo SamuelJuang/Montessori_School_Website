@@ -1,4 +1,9 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useRef, useEffect } from "react";
+import gsap from "gsap";
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 import defaultImg from "../assets/test.png";
 import defaultImg2 from "../assets/test2.jpg";
@@ -19,15 +24,47 @@ export default function Gallery3() {
         defaultImg2,
     ];
 
+    const component3Ref = useRef();
+
+    let tlComponent = gsap.timeline({
+        scrollTrigger: {
+            trigger: component3Ref.current,
+            scrub: true,
+            pin: false,
+            markers: true,
+            start: 'top 90%',
+            end: '+=50% 90%',
+            snap: {
+                ease: "power4.in"
+            }
+        }
+    })
+
+    useEffect(() => {
+        tlComponent.fromTo(".event", {
+            opacity: 0,
+        }, {
+            opacity: 1,
+            duration: 1
+        });
+        console.log("masuk masuke vent 4");
+        console.log(component3Ref);
+
+        return () => {
+            tlComponent.kill();
+        };
+    }, []);
+
     return (
         <>
-            <h1 className="text-4xl text-center font-semibold">Event #3</h1>
-            <div className="text-center">
+            <h1 ref={component3Ref} className="text-4xl text-center font-semibold event">Event #3</h1>
+            <div ref={component3Ref} className="text-center event">
                 <h1 className="text-gray-500 pt-4 pb-3">
                     Ikan hiu makan tomat, cakep banget.
                 </h1>
             </div>
             <Swiper
+                ref={component3Ref}
                 slidesPerView={'auto'}
                 centeredSlides={true}
                 breakpoints={{
@@ -54,6 +91,7 @@ export default function Gallery3() {
                 style={{
                     overflow: "visible",
                 }}
+                className="event"
             >
                 {data.map((content, index) => (
                     <SwiperSlide key={index} className="h-full mt-5">
