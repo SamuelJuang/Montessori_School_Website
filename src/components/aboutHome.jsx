@@ -14,17 +14,28 @@ const AboutHome = () => {
     const firstTextRef = useRef();
 
     const tlText = gsap.timeline({
-        defaults: {repeat: 0, ease: "power2.out"},
+        defaults: {repeat: 0, ease: "power4.out"},
         scrollTrigger: {
           trigger: firstTextRef.current,
           scrub: true,
           pin: false,
+          end: "+=1000px"
+        }
+    })
+
+    const tlText2 = gsap.timeline({
+        defaults: {repeat: 0, ease: "power4.out"},
+        scrollTrigger: {
+          trigger: firstTextRef.current,
+          scrub: true,
+          pin: false,
+          end: "+=1000px"
         }
     })
 
     const tl2 = gsap.timeline({
         scrollTrigger: {
-          trigger: videoRef.current,
+          trigger: firstTextRef.current,
           scrub: true,
           pin: false,
         }
@@ -42,37 +53,37 @@ const AboutHome = () => {
     },[tl2])
 
     useEffect(() => {
-        tlText.from(".line",1.8,{
+        tlText.from(".line",{
+            duration:0.5,
             opacity: 0,
             y: 100,
             ease: "power4.out",
-            delay: 1,
-            skewY: 7,
+            skewY: 3,
             stagger: {
-              amount: 0.3
+              amount: 0.1
             }
           })
-    })
+    },[tlText])
 
     useEffect(() => {
-        tlText.from(".line2",1.8,{
+        tlText2.from(".line2",{
+            duration:0.5,
             opacity: 0,
             y: 100,
             ease: "power4.out",
-            delay: 1,
-            skewY: 7,
+            skewY: 3,
             stagger: {
-              amount: 0.3
+              amount: 0.1
             }
           })
     })
 
     return (
-           <div className='flex flex-col gap-7'>
+           <div className='flex flex-col gap-7' >
                 <div className='flex flex-col lg:flex-row sm:flex-col'>
                     <div className='basis-8/12 mx-8 lg:ps-5 lg:ms-9 lg:mt-9 mt-5'>
                     <div className='flex flex-col gap-2'>
-                        <p className='text-purple-500'><strong>Know More About Us</strong></p>
+                        <p className='text-purple-500' ref={firstTextRef}><strong>Know More About Us</strong></p>
                             <h1 className='text-4xl font-bold'>About Montessori School</h1>
                             <span>
                                 <p className='text-slate-400 m-0 p-0 mt-5 line'>
