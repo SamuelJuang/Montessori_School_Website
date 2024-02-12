@@ -2,6 +2,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import vid1 from "../assets/videos/C0036.mp4";
+import vid2 from "../assets/videos/C0039.mp4";
+import vid3 from "../assets/videos/C0063.mp4";
+import vid4 from "../assets/videos/C0066.mp4";
+import vid5 from "../assets/videos/C0071.mp4";
+import vid6 from "../assets/videos/C0092.mp4";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,14 +19,8 @@ import 'swiper/css/autoplay';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
 export default function PeekGalery() {
-    const galleries = [
-        "src/assets/videos/C0036.MP4",
-        "src/assets/videos/C0039.MP4",
-        "src/assets/videos/C0063.MP4",
-        "src/assets/videos/C0066.MP4",
-        "src/assets/videos/C0071.MP4",
-        "src/assets/videos/C0092.MP4"
-    ];
+    const galleries = [vid1, vid2, vid3, vid4, vid5, vid6];
+
 
     const componentRef = useRef();
 
@@ -32,7 +32,6 @@ export default function PeekGalery() {
                     trigger: componentRef.current,
                     scrub: true,
                     pin: false,
-                    markers: true,
                     start: 'top 90%',
                     end: '+=50% 90%',
                 }

@@ -3,6 +3,7 @@ import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from "@gsap/react"; 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import testVideo from '../assets/testVideo.mp4';
 
 const VideoBackgroundHome = () => {
     const textRef = useRef();
@@ -27,7 +28,7 @@ const VideoBackgroundHome = () => {
         <div>
           <div>
                 <video
-                    src="src\assets\testVideo.MP4"
+                    src= {testVideo}
                     autoPlay
                     loop
                     muted 

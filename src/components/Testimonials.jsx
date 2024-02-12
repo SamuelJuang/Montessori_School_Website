@@ -52,7 +52,6 @@ export default function Testimonials() {
                     trigger: component2Ref.current,
                     scrub: true,
                     pin: false,
-                    markers: true,
                     start: 'top 90%',
                     end: '+=50% 90%',
                 }

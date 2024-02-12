@@ -135,7 +135,7 @@ function GalleryPage() {
 
   return (
     <ReactLenis root>
-    <div className="container mx-auto">
+    <div className="container mx-auto pt-12">
       <section className="py-10 px-4 md:px-8 lg:px-16 flex flex-col gap-3 sm:gap-4 md:gap-5">
         {/* ROW PERTAMA + FLOATING */}
         <div className="flex flex-col lg:flex-row gap-3 sm:gap-4 md:gap-5">

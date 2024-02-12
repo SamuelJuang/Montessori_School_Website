@@ -34,7 +34,6 @@ export default function Gallery3() {
                     trigger: component3Ref.current,
                     scrub: true,
                     pin: false,
-                    markers: true,
                     start: 'top 90%',
                     end: '+=50% 90%',
                 }

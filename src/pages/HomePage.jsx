@@ -8,9 +8,7 @@ import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Testimonials from "../components/testimonials";
-import peekGalery from "../components/peekGalery";
-import PeekGalery from "../components/peekGalery";
+
 
 gsap.registerPlugin(ScrollTrigger)
 
