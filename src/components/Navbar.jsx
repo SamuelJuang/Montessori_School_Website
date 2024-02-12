@@ -3,7 +3,7 @@ import logo from '../assets/logoMCS.png';
 import { IoMenu, IoClose } from 'react-icons/io5';
 
 const Navbar = () => {
-  const [navbarVisible, setNavbarVisible] = useState(false);
+  const [navbarVisible, setNavbarVisible] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
   const [menuAnimation, setMenuAnimation] = useState('');
   const [menuIcon, setMenuIcon] = useState(<IoMenu className="text-2xl"/>);
@@ -14,33 +14,28 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setNavbarVisible(true);
-    }, 100);
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const threshold = 100;
 
-    return () => clearTimeout(timer);
+      setNavbarVisible(scrollPosition < threshold);
+    };
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
-
-  useEffect(() => {
-    if (menuOpen) {
-      setMenuAnimation('fadeIn');
-    } else {
-      setMenuAnimation('fadeOut');
-    }
-  }, [menuOpen]);
 
   let Links = [
     { name: 'Home', link: '/' },
-    { name: 'About Us', link: '/' },
-    { name: 'Admission', link: '/' },
-    { name: 'Events', link: '/' },
     { name: 'Gallery', link: '/gallery' }
   ];
   
   return (
     <> 
     {/* Ini navbarnya */}
-      <div className={`shadow-md bg-transparent ${navbarVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'} duration-500 ease-in-out`}>
+      <div className={`bg-transparent fixed top-0 left-0 w-full z-10 ${navbarVisible ? 'opacity-100 translate-y-0 ' : 'opacity-0 translate-y-5'} duration-500 ease-in-out`}>
         <div className="md:px-10 py-4 px-7 flex justify-between items-center flex-col md:flex-row">
           <div className="flex justify-between w-full md:w-auto items-center md:mb-0">
           
