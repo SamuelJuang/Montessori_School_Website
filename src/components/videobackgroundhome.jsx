@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import testVideo from '../assets/testVideo.MP4';
 
 const VideoBackgroundHome = () => {
+    
     const textRef = useRef();
     const lineRef = useRef();
     const titleRef = useRef();
