@@ -15,7 +15,7 @@ const Footer = () => {
     ];
 
     const Contacts = [
-        { name: 'Address: Jl. Pemuda, Pemuda City Walk, Blok D03, Pekanbaru, 28292'},
+        { name: 'Address: Kompleks Pemuda City Walk, Jl. Pemuda Blok D08, Tampan, Kec. Payung Sekaki, Kota Pekanbaru, Riau 28292'},
         { name: 'Email: admin@sekolahmcs.net'},
         { name: 'Telephone (Contact Number): +6285281536872'}
     ];

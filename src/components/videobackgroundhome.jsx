@@ -3,7 +3,7 @@ import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from "@gsap/react"; 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import testVideo from '../assets/testVideo.MP4';
+import testVideo from '../assets/videobackground.mp4';
 
 const VideoBackgroundHome = () => {
     
@@ -33,7 +33,7 @@ const VideoBackgroundHome = () => {
                     autoPlay
                     loop
                     muted 
-                    className=" w-screen h-screen brightness-[.25] object-cover"
+                    className=" w-screen h-screen brightness-[.55] object-cover"
                 />
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-balance">
                     <h1 ref={titleRef} className="text-5xl font-bold text-white pt-5  font-bold text-white pt-5 font-bold text-white pt-5">Montessori Community School </h1>
