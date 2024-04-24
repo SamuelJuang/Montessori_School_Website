@@ -2,12 +2,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import vid1 from "../assets/videos/C0036.mp4";
-import vid2 from "../assets/videos/C0039.mp4";
-import vid3 from "../assets/videos/C0063.mp4";
-import vid4 from "../assets/videos/C0066.mp4";
-import vid5 from "../assets/videos/C0071.mp4";
-import vid6 from "../assets/videos/C0092.mp4";
+import vid1 from "../assets/videos/C0071.mp4";
+import vid2 from "../assets/videos/peek2.mp4";
+import vid3 from "../assets/videos/letthemcook.mp4";
+import vid4 from "../assets/videos/C0063.mp4";
+import vid5 from "../assets/videos/peek2.mp4";
+import vid6 from "../assets/videos/C0071.mp4";
 
 gsap.registerPlugin(ScrollTrigger);
 

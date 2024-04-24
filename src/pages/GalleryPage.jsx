@@ -303,7 +303,7 @@ function GalleryPage() {
                 className="object-cover object-center h-full w-full rounded-2xl"
               />
             </div>
-            {/* Thrid Image */}
+            {/* Third Image */}
             <div className="overflow-hidden rounded-2xl my-3 lg:px-3 lg:-mr-64 lg:h-[25rem] lg:hover:-translate-x-56 lg:hover:scale-110 lg:duration-500">
               <img
                 src={defaultImg2}

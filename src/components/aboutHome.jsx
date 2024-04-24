@@ -1,7 +1,7 @@
 import React from 'react';
 import defaultImg from "../assets/test.png";
-import tempImg from "../assets/temp.jpg";
-import temp2 from "../assets/test2.jpg";
+import tempImg from "../assets/gallery/le-montessori.jpg";
+import temp2 from "../assets/gallery/le-gp.jpg";
 import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from "@gsap/react"; 
